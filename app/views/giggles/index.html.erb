@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Giggles</h1>
+
+    <% @giggles.each do |giggle| %>
+      <div class="card">
+      <div class="card-header bg-info">
+       <p><%= link_to giggle.title, giggle %> |  <%= giggle.author %></p> 
+      </div>
+      <div class="card-body">
+        <p><%= giggle.body %></p> </div>
+       <div class="card-footer">Date Created: <%= giggle.created_at %></div>
+      </div>
+    <% end %>
+ 
+
+<br>
+
+<%= link_to 'New Giggle', new_giggle_path %>

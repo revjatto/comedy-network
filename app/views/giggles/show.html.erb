@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @giggle.title %> | <%= @giggle.author %>
+</p>
+<%= image_tag(@giggle.image) %>
+<p>
+  <strong>Body:</strong>
+  <%= @giggle.body %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_giggle_path(@giggle) %> |
+ <%= link_to 'Destroy', @giggle, method: :delete, data: { confirm: 'Are you sure?' } %></td> |
+<%= link_to 'Back', giggles_path %>

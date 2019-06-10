@@ -1,0 +1,14 @@
+
+
+    <% @posts.each do |post| %>
+     
+  <div class="container">
+        <h2><%= link_to post.title, post_path(post) %></h2>
+        <small><%= post.author %> | <%= post.created_at %></small> 
+        <p><%= post.body %></p>
+        
+      </div>
+    <% end %>
+<%= link_to 'New Post', new_post_path %>
+<%= link_to 'Comment', comments_path %>
+</div>

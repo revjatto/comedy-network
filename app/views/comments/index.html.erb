@@ -1,0 +1,15 @@
+
+   <% @comments.each do |comment| %>
+     
+        <p><%= comment.title %></p>
+        <p><%= comment.body %></p>
+        <p><%= comment.user.email %></p>
+     <%= link_to 'Show', comment %> |
+     <% if current_user && current_user.admin %>
+     <%= link_to 'Edit', edit_comment_path(comment) %> |
+    <%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %> |
+    <%= link_to 'New Comment', new_comment_path %>
+     <% end %>
+    <% end %>
+
+

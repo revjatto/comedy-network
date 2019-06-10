@@ -1,0 +1,16 @@
+
+
+<p>
+  <strong>Title:</strong>
+  <%= @comment.title %> | Posted By: <%= @comment.user.email %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @comment.body %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_comment_path(@comment) %> |
+<%= link_to 'Back', comments_path %>

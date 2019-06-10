@@ -1,0 +1,2 @@
+module GigglesHelper
+end
